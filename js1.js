@@ -23,3 +23,17 @@ btnclear.addEventListener("click",()=>
     inputArea.value="";
     outputArea.value="";
 })
+
+var count=1;
+
+inputArea.addEventListener("keyup",(e)=>
+{
+    if(e.keyCode === 13)
+    {
+    const newspan = document.createElement('span');
+    count++;
+    newspan.textContent=count;
+    const divsec = document.querySelector(".number");
+    divsec.append(newspan);
+    }
+})
